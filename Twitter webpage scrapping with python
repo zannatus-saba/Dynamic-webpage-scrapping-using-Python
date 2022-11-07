@@ -1,0 +1,125 @@
+import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait as wait
+from selenium.webdriver.support import expected_conditions as EC
+import time  
+from selenium.webdriver.edge.service import Service
+
+
+
+driver = webdriver.Edge(executable_path=r'C:\Users\zanna\OneDrive\Documents\MSIS\edgedriver_win32\msedgedriver.exe')
+
+twitter_url=  'https://twitter.com/i/flow/login'
+
+driver.get(twitter_url)
+
+time.sleep(3)
+
+
+canv_username = driver.find_element(By.CSS_SELECTOR, 'input.r-30o5oe')
+
+canv_username.send_keys('ZannatusSaba' + Keys.ENTER)
+
+time.sleep(3)
+
+canv_password = driver.find_element(By.CSS_SELECTOR,'input.r-homxoj')
+
+canv_password.send_keys('XX' + Keys.ENTER)
+
+search_elem = driver.find_element(By.CSS_SELECTOR,'input.r-30o5oe')
+
+search_elem.send_keys('#datascience' + Keys.ENTER)
+
+##datascience
+
+###### 1st tweet
+twitter_name1 = driver.find_element(By.CSS_SELECTOR,'#id__lthw8j855z > div.css-1dbjc4n.r-1awozwy.r-18u37iz.r-1wbh5a2.r-dnmrzs > div > a > div > div.css-901oao.r-1awozwy.r-18jsvk2.r-6koalj.r-37j5jr.r-a023e6.r-b88u0q.r-rjixqe.r-bcqeeo.r-1udh08x.r-3s2u2q.r-qvutc0 > span > span')
+twitter_name1.text
+
+twitter_username1 = driver.find_element(By.CSS_SELECTOR,'#id__lthw8j855z > div.css-1dbjc4n.r-18u37iz.r-1wbh5a2.r-13hce6t > div > div.css-1dbjc4n.r-1wbh5a2.r-dnmrzs > a > div > span')
+twitter_username1.text
+
+twitter_text1 = driver.find_element(By.CSS_SELECTOR,'#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-13qz1uu.r-417010 > main > div > div > div > div > div > div:nth-child(3) > div > section > div > div > div:nth-child(3) > div > div > div > article > div > div > div > div.css-1dbjc4n.r-18u37iz > div.css-1dbjc4n.r-1iusvr4.r-16y2uox.r-1777fci.r-kzbkwu > div:nth-child(2) > div:nth-child(1)')
+twitter_text1.text
+
+twitter_time1= driver.find_element(By.CSS_SELECTOR,'#id__lthw8j855z > div.css-1dbjc4n.r-18u37iz.r-1wbh5a2.r-13hce6t > div > div.css-1dbjc4n.r-18u37iz.r-1q142lx > a > time')
+twitter_time1.text
+
+
+##### 2nd tweet
+twitter_name2 = driver.find_element(By.CSS_SELECTOR,'#id__kurw4pjwa3 > div.css-1dbjc4n.r-1awozwy.r-18u37iz.r-1wbh5a2.r-dnmrzs > div > a > div > div.css-901oao.r-1awozwy.r-18jsvk2.r-6koalj.r-37j5jr.r-a023e6.r-b88u0q.r-rjixqe.r-bcqeeo.r-1udh08x.r-3s2u2q.r-qvutc0 > span > span')
+twitter_name2.text
+
+twitter_username2 = driver.find_element(By.CSS_SELECTOR, '#id__kurw4pjwa3 > div.css-1dbjc4n.r-18u37iz.r-1wbh5a2.r-13hce6t > div > div.css-1dbjc4n.r-1wbh5a2.r-dnmrzs > a > div > span')
+twitter_username2.text
+
+twitter_text2 = driver.find_element(By.CSS_SELECTOR, '#id__awthfg6n1xo')
+twitter_text2.text
+
+twitter_time2= driver.find_element(By.CSS_SELECTOR,'#id__kurw4pjwa3 > div.css-1dbjc4n.r-18u37iz.r-1wbh5a2.r-13hce6t > div > div.css-1dbjc4n.r-18u37iz.r-1q142lx > a > time')
+twitter_time2.text
+
+
+#dataviz
+
+search_elem1 = driver.find_element(By.CSS_SELECTOR,'input.r-30o5oe')
+search_elem1.send_keys('#dataviz' + Keys.ENTER)
+
+#1st tweet
+twitter_name3 = driver.find_element(By.CSS_SELECTOR, '#id__ajtnu97qvwh > div.css-1dbjc4n.r-1awozwy.r-18u37iz.r-1wbh5a2.r-dnmrzs > div > a > div > div.css-901oao.r-1awozwy.r-18jsvk2.r-6koalj.r-37j5jr.r-a023e6.r-b88u0q.r-rjixqe.r-bcqeeo.r-1udh08x.r-3s2u2q.r-qvutc0 > span > span')
+twitter_name3.text
+
+twitter_username3 = driver.find_element(By.CSS_SELECTOR, '#id__ajtnu97qvwh > div.css-1dbjc4n.r-18u37iz.r-1wbh5a2.r-13hce6t > div > div.css-1dbjc4n.r-1wbh5a2.r-dnmrzs > a > div > span')
+twitter_username3.text
+
+twitter_text3 = driver.find_element(By.CSS_SELECTOR, '#id__0g4nprc8lkf5')
+twitter_text3.text
+
+twitter_time3= driver.find_element(By.CSS_SELECTOR,'#id__ajtnu97qvwh > div.css-1dbjc4n.r-18u37iz.r-1wbh5a2.r-13hce6t > div > div.css-1dbjc4n.r-18u37iz.r-1q142lx > a > time')
+twitter_time3.text
+
+#2nd tweet
+twitter_name4 = driver.find_element(By.CSS_SELECTOR, '#id__btpd7nmwucn > div.css-1dbjc4n.r-1awozwy.r-18u37iz.r-1wbh5a2.r-dnmrzs > div > a > div > div.css-901oao.r-1awozwy.r-18jsvk2.r-6koalj.r-37j5jr.r-a023e6.r-b88u0q.r-rjixqe.r-bcqeeo.r-1udh08x.r-3s2u2q.r-qvutc0 > span > span')
+twitter_name4.text
+
+twitter_username4 = driver.find_element(By.CSS_SELECTOR, '#id__btpd7nmwucn > div.css-1dbjc4n.r-18u37iz.r-1wbh5a2.r-13hce6t > div > div.css-1dbjc4n.r-1wbh5a2.r-dnmrzs > a > div > span')
+twitter_username4.text
+
+twitter_text4 = driver.find_element(By.CSS_SELECTOR, '#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-13qz1uu.r-417010 > main > div > div > div > div > div > section > div > div > div:nth-child(1) > div > div > div:nth-child(1) > article > div > div > div > div:nth-child(3) > div:nth-child(2)')
+twitter_text4.text
+
+twitter_time4= driver.find_element(By.CSS_SELECTOR,'#id__fz46kok3z1b > div.css-1dbjc4n.r-18u37iz.r-1wbh5a2.r-13hce6t > div > div.css-1dbjc4n.r-18u37iz.r-1q142lx > a > time')
+twitter_time4.text
+
+
+list1=[twitter_name1.text, twitter_name2.text, twitter_name3.text, twitter_name4.text]
+
+list2=[twitter_username1.text, twitter_username2.text, twitter_username3.text, twitter_username4.text]
+
+list3=[twitter_text1.text, twitter_text2.text, twitter_text3.text, twitter_text4.text]
+
+list4=[twitter_time1.text, twitter_time2.text, twitter_time3.text, twitter_time4.text]
+
+df1 = pd.DataFrame(list1)
+
+df2= pd.DataFrame(list2)
+
+df3=pd.DataFrame(list3)
+
+df4=pd.DataFrame(list4)
+
+result = pd.concat([df1, df2, df3, df4], axis=1, join='inner')
+
+result.columns =['name', 'username', 'tweet', 'date']
+
+import os
+
+os.chdir('C:/Users/zanna/OneDrive/Documents/MSIS')
+
+directory= 'C:/Users/zanna/OneDrive/Documents/MSIS'
+
+#saving dataframe as csv
+result.to_csv('canvas_saba.txt', index=False, sep='\t')
